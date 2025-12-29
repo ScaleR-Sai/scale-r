@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import logo from '../../../assets/298aba5416cfd396f3c48646e73ea56690c1edb5.png';
+import logo from '../../assets/298aba5416cfd396f3c48646e73ea56690c1edb5.png';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
