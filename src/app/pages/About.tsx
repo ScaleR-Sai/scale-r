@@ -168,16 +168,16 @@ export function About() {
       <section className="py-20 md:py-28 bg-gradient-to-br from-blue-900 to-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
-            Ready to Scale Smarter?
+            Ready to Work Together?
           </h2>
           <p className="text-xl text-blue-200 mb-8">
-            Let's discuss how Scale-R AI can transform your business operations.
+            Join our waitlist to be among the first businesses partnering with Scale-R AI.
           </p>
           <a 
             href="/contact" 
             className="inline-block px-8 py-4 bg-white text-slate-900 rounded-full hover:bg-blue-50 transition-all"
           >
-            Get Started Today
+            Join the Waitlist
           </a>
         </div>
       </section>

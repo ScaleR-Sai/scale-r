@@ -99,7 +99,7 @@ export function CookiePolicy() {
               If you have any questions about our Cookie Policy, please contact us at:
             </p>
             <p className="text-slate-600 mt-4">
-              Email: edem.quist.sclr@gmail.com<br />
+              Email: scaleraigh@gmail.com<br />
               Address: Accra, Ghana
             </p>
           </section>

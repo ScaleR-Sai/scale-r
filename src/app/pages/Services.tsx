@@ -193,16 +193,16 @@ export function Services() {
       <section className="py-20 md:py-28 bg-gradient-to-br from-blue-900 to-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
-            Ready to Transform Your Business?
+            Interested in Our Services?
           </h2>
           <p className="text-xl text-blue-200 mb-8">
-            Let's discuss which services are right for your needs.
+            Join our waitlist and we'll discuss which solutions are right for your business.
           </p>
           <Link 
             to="/contact" 
             className="inline-block px-8 py-4 bg-white text-slate-900 rounded-full hover:bg-blue-50 transition-all"
           >
-            Schedule a Consultation
+            Join the Waitlist
           </Link>
         </div>
       </section>

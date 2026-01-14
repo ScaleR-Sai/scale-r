@@ -8,12 +8,36 @@ export function Contact() {
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission (placeholder)
-    alert('Thank you for your interest! We\'ll be in touch soon.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    
+    // Simulate form submission - Replace with your actual backend API
+    try {
+      // TODO: Replace with actual API call
+      // const response = await fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData)
+      // });
+      
+      // Simulate network delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', company: '', message: '' });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,10 +53,10 @@ export function Contact() {
       <section className="bg-gradient-to-br from-blue-50 via-white to-teal-50 py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6">
-            Get in <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">Touch</span>
+            Join the <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">Waitlist</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed">
-            Ready to scale smarter? Let's discuss how Scale-R AI can transform your business.
+            Be among the first to work with Scale-R AI as your external AI department.
           </p>
         </div>
       </section>
@@ -43,21 +67,34 @@ export function Contact() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl text-slate-900 mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl text-slate-900 mb-6">Request Early Access</h2>
               <p className="text-slate-600 mb-8">
-                Fill out the form below and we'll get back to you within 24 hours.
+                Tell us about your business and how AI could help. We'll reach out to discuss next steps.
               </p>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+                {submitStatus === 'success' && (
+                  <div className="p-4 bg-green-50 border border-green-200 rounded-xl" role="alert">
+                    <p className="text-green-800">Thank you! We'll be in touch within 24 hours.</p>
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-xl" role="alert">
+                    <p className="text-red-800">Something went wrong. Please try again or email us directly.</p>
+                  </div>
+                )}
+                
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                    Name *
+                    Name <span className="text-red-500" aria-label="required">*</span>
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     required
+                    aria-required="true"
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
@@ -67,13 +104,14 @@ export function Contact() {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                    Email *
+                    Email <span className="text-red-500" aria-label="required">*</span>
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     required
+                    aria-required="true"
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
@@ -98,12 +136,13 @@ export function Contact() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                    Message *
+                    Message <span className="text-red-500" aria-label="required">*</span>
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
+                    aria-required="true"
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
@@ -114,10 +153,12 @@ export function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all hover:shadow-lg flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  aria-busy={isSubmitting}
+                  className="w-full px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all hover:shadow-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
-                  <Send size={20} />
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {!isSubmitting && <Send size={20} />}
                 </button>
               </form>
             </div>
@@ -136,8 +177,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg text-slate-900 mb-1">Email</h3>
-                    <a href="mailto:edem.quist.sclr@gmail.com" className="text-slate-600 hover:text-blue-600 transition-colors">
-                      edem.quist.sclr@gmail.com
+                    <a href="mailto:scaleraigh@gmail.com" className="text-slate-600 hover:text-blue-600 transition-colors">
+                      scaleraigh@gmail.com
                     </a>
                   </div>
                 </div>
@@ -193,19 +234,11 @@ export function Contact() {
       <section className="py-20 md:py-28 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl text-slate-900 mb-4">
-            Prefer a Quick Call?
+            Have Questions?
           </h2>
           <p className="text-lg text-slate-600 mb-8">
-            Schedule a 30-minute consultation to discuss your needs and explore how we can help.
+            Reach out directly at scaleraigh@gmail.com or fill out the form above to join the waitlist.
           </p>
-          <a 
-            href="https://calendly.com/scaler-ai" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all hover:shadow-lg"
-          >
-            Schedule a Call
-          </a>
         </div>
       </section>
     </div>

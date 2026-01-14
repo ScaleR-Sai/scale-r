@@ -11,7 +11,7 @@ export function HowWeWork() {
             How We <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">Work</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed">
-            A clear, structured approach to delivering AI and automation solutions that actually work
+            Our four-phase process ensures you get solutions that work, not experiments that might.
           </p>
         </div>
       </section>
@@ -21,11 +21,10 @@ export function HowWeWork() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl text-slate-900 mb-4">
-              Our Four-Phase Approach
+              How Scale-R Works
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Each phase builds on the last, ensuring we understand your needs and deliver solutions 
-              that create lasting value
+              Each phase builds on the last, ensuring we deliver solutions that create lasting value
             </p>
           </div>
 
@@ -43,8 +42,8 @@ export function HowWeWork() {
                   </div>
                 </div>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  We start by deeply understanding your business, your challenges, and your goals. 
-                  This isn't a cookie-cutter assessment—it's a comprehensive analysis of your unique situation.
+                  Before we recommend any solution, we map your processes, interview your team, and assess your infrastructure. 
+                  This ensures we understand the real problems, not just the symptoms.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex gap-3">
@@ -106,8 +105,8 @@ export function HowWeWork() {
                   </div>
                 </div>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  Armed with insights from the discovery phase, we develop a detailed roadmap for 
-                  implementation. Every solution is designed specifically for your business context.
+                  We create a detailed roadmap based on what we learned in discovery. Every recommendation is 
+                  backed by data and tailored to your business, not copied from a template.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex gap-3">
@@ -145,8 +144,8 @@ export function HowWeWork() {
                   </div>
                 </div>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  This is where the magic happens. We build, test, and deploy your solution with 
-                  minimal disruption to your ongoing operations.
+                  We build, test, and deploy your solutions in phases, so your team can adopt them without disruption. 
+                  You'll see progress at every step, not just at the end.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex gap-3">
@@ -205,12 +204,12 @@ export function HowWeWork() {
                   </div>
                   <div>
                     <div className="text-sm text-teal-600 font-semibold">PHASE 4</div>
-                    <h3 className="text-3xl text-slate-900">Support & Optimization</h3>
+                    <h3 className="text-3xl text-slate-900">Ongoing Partnership</h3>
                   </div>
                 </div>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  We don't disappear after launch. We stay engaged to ensure your solution continues 
-                  to deliver value and evolves with your needs.
+                  Your business evolves, and your systems should too. We remain your external AI department, 
+                  continuously optimizing and scaling solutions as your needs change.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex gap-3">
@@ -240,16 +239,16 @@ export function HowWeWork() {
       <section className="py-20 md:py-28 bg-gradient-to-br from-blue-900 to-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
-            Let's Start Your Journey
+            Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-200 mb-8">
-            Ready to see how our approach can transform your business? Schedule a discovery call.
+            Join our waitlist to be among the first businesses working with Scale-R AI.
           </p>
           <Link 
             to="/contact" 
             className="inline-block px-8 py-4 bg-white text-slate-900 rounded-full hover:bg-blue-50 transition-all"
           >
-            Book a Consultation
+            Join the Waitlist
           </Link>
         </div>
       </section>

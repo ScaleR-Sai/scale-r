@@ -1,0 +1,10 @@
+# robots.txt for Scale-R AI
+# This file tells search engine crawlers which pages to index
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://scale-r.ai/sitemap.xml

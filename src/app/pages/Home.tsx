@@ -25,7 +25,7 @@ export function Home() {
                   to="/contact" 
                   className="px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all hover:shadow-lg flex items-center justify-center gap-2"
                 >
-                  Book a Consultation
+                  Join the Waitlist
                   <ArrowRight size={20} />
                 </Link>
                 <Link 
@@ -246,10 +246,10 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
-              Our Programs
+              How Scale-R Works
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Structured engagements designed to deliver maximum value at every stage
+              A clear, methodical approach to becoming your external AI department
             </p>
           </div>
 
@@ -258,9 +258,9 @@ export function Home() {
               <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6 text-white">
                 <span>1</span>
               </div>
-              <h3 className="text-xl text-slate-900 mb-3">Client Readiness Course</h3>
+              <h3 className="text-xl text-slate-900 mb-3">Readiness Assessment</h3>
               <p className="text-slate-600 leading-relaxed">
-                Prepare your team for AI transformation with our comprehensive readiness program.
+                We evaluate your current systems and team capabilities to ensure you're prepared for AI integration before we begin.
               </p>
             </div>
 
@@ -270,7 +270,7 @@ export function Home() {
               </div>
               <h3 className="text-xl text-slate-900 mb-3">Discovery & Audit</h3>
               <p className="text-slate-600 leading-relaxed">
-                Deep dive into your systems to identify opportunities for optimization and automation.
+                We map your processes, identify bottlenecks, and pinpoint where AI and automation will deliver the most value.
               </p>
             </div>
 
@@ -280,7 +280,7 @@ export function Home() {
               </div>
               <h3 className="text-xl text-slate-900 mb-3">Implementation</h3>
               <p className="text-slate-600 leading-relaxed">
-                Execute the plan with precision, integrating new systems seamlessly into your workflow.
+                We build, test, and deploy your solutions with minimal disruption, ensuring your team can adopt them smoothly.
               </p>
             </div>
 
@@ -288,9 +288,9 @@ export function Home() {
               <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center mb-6 text-white">
                 <span>4</span>
               </div>
-              <h3 className="text-xl text-slate-900 mb-3">Long-Term Partnership</h3>
+              <h3 className="text-xl text-slate-900 mb-3">Ongoing Partnership</h3>
               <p className="text-slate-600 leading-relaxed">
-                Ongoing support and continuous improvement to keep your systems ahead of the curve.
+                We remain your external AI department, continuously optimizing systems and scaling solutions as your business grows.
               </p>
             </div>
           </div>
@@ -324,7 +324,7 @@ export function Home() {
               to="/contact" 
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 rounded-full hover:bg-blue-50 transition-all"
             >
-              Start Your Journey
+              Get Early Access
               <ArrowRight size={20} />
             </Link>
           </div>
